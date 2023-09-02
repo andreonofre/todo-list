@@ -9,7 +9,12 @@ const TodoForm = ({addTodo}) => {
        event.preventDefault();
 
        //Passando o estado para o Wrapper
-       addTodo(value);// Passando o que foi digitado ao clicar no botão 
+       if (value === "") {
+        alert("Adicione alguma tarefa")
+       } else {
+
+         addTodo(value);// Passando o que foi digitado ao clicar no botão 
+       };
       //console.log(value)
       setValue("");
     };
